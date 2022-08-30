@@ -24,9 +24,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="expenses" element={<Expenses />} />
-      <Route path="invoices" element={<Invoices />} />
+      <Route path="/" element={<App />}>
+        <Route path="expenses" element={<Expenses />} />
+        <Route path="invoices" element={<Invoices />} />
+      </Route>
     </Routes>
   </BrowserRouter>
 )
@@ -38,3 +39,15 @@ To avoid repeating shared layouts. We can get automatic, persistent layout handl
 
 1. Nest the routes inside of the App route
 2. Render an Outlet
+
+First let's nest the routes. Right now the Expenses and Invoices routes are siblings to the App.
+We want to make them children.
+
+We then need to render an "Outlet"
+
+```javascript
+import { Outlet, Link } from "react-router-dom"
+;<Outlet />
+```
+
+- Add Data
