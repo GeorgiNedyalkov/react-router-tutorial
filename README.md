@@ -51,3 +51,25 @@ import { Outlet, Link } from "react-router-dom"
 ```
 
 - Add Data
+- Add No Match Route
+
+```javascript
+<Route
+  path="*"
+  element={
+    <main style={{ padding: "1rem" }}>
+      <p>There's nothing here!</p>
+    </main>
+  }
+/>
+```
+
+- Add a route for each specific invoice
+- Create a single invoice component
+- Nest that component into the Invoices parent component
+- Add an outlet in the parent component
+- Display information for the invoices
+
+- Index Routes
+
+- Search Params
