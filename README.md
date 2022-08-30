@@ -73,3 +73,7 @@ import { Outlet, Link } from "react-router-dom"
 - Index Routes
 
 - Search Params
+
+- Custom behavior
+
+- Add delete functionality
